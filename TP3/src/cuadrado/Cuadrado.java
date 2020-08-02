@@ -1,4 +1,4 @@
-package ejercicio2;
+package cuadrado;
 
 public class Cuadrado {
 
@@ -14,11 +14,11 @@ public class Cuadrado {
 
 	}
 
-	public int getLado()) {
+	public int getLado() {
 		return lado;
 	}
 
-	public void setLado(int lado) {
+	public int setLado(int lado) {
 		this.lado = lado;
 	}
 
