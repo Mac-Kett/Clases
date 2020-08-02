@@ -1,4 +1,4 @@
-package ejercicio6;
+package automovil;
 
 public class Automovil {
 

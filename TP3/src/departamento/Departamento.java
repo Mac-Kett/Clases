@@ -1,4 +1,4 @@
-package ejercitacionParcial;
+package departamento;
 
 public class Departamento {
 

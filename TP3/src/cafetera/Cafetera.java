@@ -1,4 +1,4 @@
-package ejercicio4;
+package cafetera;
 
 public class Cafetera {
 
