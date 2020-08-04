@@ -1,4 +1,4 @@
-package otraPractica;
+package consultorio;
 
 public class Paciente {
 

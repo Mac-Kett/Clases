@@ -1,4 +1,4 @@
-package parcialCuatriAnterior;
+package pedido;
 
 public class Pedido {
 	

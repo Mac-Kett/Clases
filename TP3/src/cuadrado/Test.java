@@ -1,4 +1,4 @@
-package ejercicio2;
+package cuadrado;
 
 public class Test {
 
@@ -12,7 +12,7 @@ public class Test {
 
 	
 	public static void testearCuadrado (Cuadrado cuadrado) {
-		int aux = cuadrado.getLado(40);
+		int aux = cuadrado.setLado(40);
 		System.out.println(cuadrado.getLado());
 	}
 }
