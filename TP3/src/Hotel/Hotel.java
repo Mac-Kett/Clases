@@ -1,4 +1,4 @@
-package ejercicio5;
+package Hotel;
 
 public class Hotel {
 	

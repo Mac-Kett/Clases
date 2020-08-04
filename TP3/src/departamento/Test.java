@@ -1,4 +1,4 @@
-package ejercitacionParcial;
+package departamento;
 import java.util.Scanner;
 public class Test {
 

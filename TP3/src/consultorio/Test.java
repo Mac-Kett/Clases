@@ -1,4 +1,4 @@
-package otraPractica;
+package consultorio;
 import java.util.Scanner;
 
 public class Test {
