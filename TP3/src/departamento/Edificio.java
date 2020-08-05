@@ -1,4 +1,4 @@
-package ejercitacionParcial;
+package departamento;
 import java.util.ArrayList;
 public class Edificio {
 
@@ -36,7 +36,7 @@ public class Edificio {
 		this.listaDeptos = listaDeptos;
 	}
 	
-	public Departamento agregarDepartamento(int uni, String nombreProp, String dni, String voto) {
+	public static Departamento agregarDepartamento(int uni, String nombreProp, String dni, String voto) {
 		
 		Departamento departamentoAgregar = null;
 		int aux=0;
@@ -93,4 +93,4 @@ public class Edificio {
 	}
 	}
 	
-}
+
