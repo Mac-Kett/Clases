@@ -6,6 +6,6 @@ public class Empleado {
 	private int antiguedad;
 	private String dni;
 	
-	public Empleado
+	//falta constructor
 	
 }
