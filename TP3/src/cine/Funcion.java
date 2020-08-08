@@ -1,4 +1,4 @@
-package repaso;
+package cine;
 
 import java.util.ArrayList;
 
