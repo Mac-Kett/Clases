@@ -1,14 +1,11 @@
-import java.util.ArrayList;
+package cine;
 
-import repaso.Asiento;
-import repaso.Entrada;
-import repaso.EstadoAsiento;
-import repaso.Funcion;
+import java.util.ArrayList;
 
 public class Cine {
 
 	private String nombre;
-	ArrayList <Funcion> asientos;
+	ArrayList <Entrada> entradas;
 	
 	public String getNombre() {
 		return nombre;
@@ -18,37 +15,19 @@ public class Cine {
 		this.nombre = nombre;
 	}
 
-	public ArrayList<Funcion> getFunciones() {
-		return asientos;
+	public ArrayList<Entrada> getFunciones() {
+		return entradas;
 	}
 
-	public void setFunciones(ArrayList<Funcion> funciones) {
-		this.asientos = funciones;
+	public void setFunciones(ArrayList<Entrada> entradas) {
+		this.entradas = entradas;
 	}
-	
-	public boolean procesarEntradas (ArrayList<Entrada>entradas) {
-		boolean pudo = true;
-		
+
+	public boolean procesarEntradas (ArrayList <Entrada> entradas) {
+		boolean pudo = false;
 		
 		
 		return pudo;
-	}
-
-	public Asiento buscarAsiento (String letraBuscada, int filaBuscada) {
-		Asiento asientoBuscado = null;
-		int i = 0;
-		
-		while (i < asientos.size() && asientoBuscado == null) {
-			if(asientos.get(i).getLetra().equals(letraBuscada)
-				&& asientos.get(i).getFila()==filaBuscada 
-				&& asientos.get(i).getEstado == EstadoAsiento.RESERVADO) {
-				
-				asientoBuscado = asientos.get(i);
-			}
-			else {
-				i++;
-			}
-		}
 	}
 	
 	public static void main(String[] args) {
@@ -57,3 +36,4 @@ public class Cine {
 	}
 
 }
+

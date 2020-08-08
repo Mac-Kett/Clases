@@ -1,10 +1,13 @@
-import java.util.ArrayList;
+package cine;
 
-import repaso.Asiento;
+import java.util.ArrayList;
 
 public class Funcion {
 
 	private String dia;
+	private String horaInicio;
+	ArrayList <Asiento> asientos;
+	
 	public String getDia() {
 		return dia;
 	}
@@ -29,8 +32,22 @@ public class Funcion {
 		this.asientos = asientos;
 	}
 
-	private String horaInicio;
-	ArrayList <Asiento> asientos;
+	public Asiento buscarAsiento (String letraBuscada, int filaBuscada) {
+		Asiento asientoBuscado = null;
+		int i = 0;
+		
+		while (i < asientos.size() && asientoBuscado == null) {
+			if(asientos.get(i).getLetra().equals(letraBuscada)
+				&& asientos.get(i).getFila()==filaBuscada 
+				&& asientos.get(i).getEstado == EstadoAsiento.RESERVADO) {
+				
+				asientoBuscado = asientos.get(i);
+			}
+			else {
+				i++;
+			}
+		}
+	}
 	
 	public static void main(String[] args) {
 		// TODO Apéndice de método generado automáticamente
@@ -38,4 +55,3 @@ public class Funcion {
 	}
 
 }
-

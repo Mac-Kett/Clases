@@ -1,4 +1,4 @@
-import repaso.EstadoAsiento;
+package cine;
 
 public class Asiento {
 
