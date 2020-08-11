@@ -34,7 +34,17 @@ public class Cine {
 
 	public boolean procesarEntradas (ArrayList <Entrada> entradas) {
 		boolean pudo = false;
+		int i = 0;
+		Entrada entradaBuscada = null;
 		
+		while(i < entradas.size() && entradaBuscada == null) {
+			if( entradas.get(i). ) {
+				entradaBuscada = entradas.get(i);
+			}
+			else {
+				i++;
+			}
+		}
 		
 		return pudo;
 	}
