@@ -8,7 +8,7 @@ public class Grupo {
 	Integrante [] integrantes;
 	
 	public Grupo (String nom) {
-		this.nombre(nom);
+		this.setNombre(nom);
 	}
 	
 	public String getNombre() {
@@ -86,8 +86,35 @@ public class Grupo {
 		return aux;
 	}
 	
-	public String obtenerIntegrante(int posicion) {
+	public Integrante obtenerIntegrante(int posicion) {
+		Integrante integranteBuscado = integrantes[posicion];
+		return integranteBuscado;
+	}
+	
+	public Integrante removerIntegrante(String nombreIntegrante) {
 		
+			int pos = obtenerPosicionIntegrante (nombreIntegrante);
+			Integrante integrante = this.integrantes.remove[pos];
+			
+		return integrante;
+	}
+	
+	private void mostrarIntegrantes() {
+		System.out.println("La cantidad de integrantes es: " + this.getCantidadIntegrantes());
+		for(Integrante a: Array) {
+			System.out.println(a.getNombre());
+		}
+	}
+	
+	public void mostrar() {
+		System.out.println("El nombre del grupo es: " + this.nombre)
+		System.out.println(this.mostrarIntegrantes());
+	}
+	
+	public void vaciar() {
+		for(Integrante a: Array) {
+			this.removerIntegrante(a);
+		}
 	}
 	
 	public static void main(String[] args) {
