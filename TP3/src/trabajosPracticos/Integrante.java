@@ -8,6 +8,10 @@ public class Integrante {
 		// TODO Apéndice de método generado automáticamente
 
 	}
+	
+	public Integrante (String nom) {
+		this.setNombre(nom);
+	}
 
 	public String getNombre() {
 		return nombre;
