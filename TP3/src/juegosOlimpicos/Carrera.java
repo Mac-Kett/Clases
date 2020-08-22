@@ -38,15 +38,17 @@ public class Carrera {
 	
 	
 	
-	public Atleta buscarAtleta (String nombre) {
+	public Atleta buscarAtleta () {
 		Atleta competidorEncontrado = null;
 		Atleta competidorAux;
 		int i = 0;
+		double nuevoMejorTiempo = 0;
 		
 		while(competidorEncontrado == null) {
 			competidorAux = this.atletas[i];
-					if (competidorAux.getNombre() == nombre) {
+					if (competidorAux.getSegundos() >= aux) {
 						competidorEncontrado = competidorAux;
+						nuevoMejorTiempo = competidorEncontrado.getSegundos();
 					}
 					else {
 						i++;
@@ -71,7 +73,7 @@ public class Carrera {
 	}
 	
 	
-	public void agregarCompetidor(String nombre) {
+	public void agregarCompetidor(Atleta nombre) {
 		
 		Atleta[] arrAuxiliar;
 		
