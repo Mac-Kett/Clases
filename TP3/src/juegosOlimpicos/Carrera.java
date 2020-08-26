@@ -47,6 +47,7 @@ public class Carrera {
 						competidorEncontrado = competidorAux;
 						nuevoMejorTiempo = competidorEncontrado.getSegundos();
 						agregarGanadores(competidorEncontrado);
+						mostrarGanadores(nuevoMejorTiempo);
 					}
 					else {
 						i++;
@@ -68,11 +69,12 @@ public class Carrera {
 	
 	//Método itera por cada ganador del Array y lo imprime
 	
-	private void mostrarGanadores() {
+	private void mostrarGanadores(double nuevoMejorTiempo) {
 		int i = 0;
 		while(i <= ganadores.length) {
 			Atleta aux = ganadores[i];
 		System.out.println(aux.getNombre());
+		System.out.println(nuevoMejorTiempo);
 		}
 	}
 
