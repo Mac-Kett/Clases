@@ -9,15 +9,11 @@ public class Carrera {
 	private String juego;
 	private int distancia;
 	Atleta [] atletas;
+	Atleta [] ganadores;
 	
 	public Carrera (String juego, int dist) {
 		this.setJuego(juego);
 		this.setDistancia(dist);
-	}
-	
-	public static void main(String[] args) {
-		// TODO Apéndice de método generado automáticamente
-
 	}
 
 	public String getJuego() {
@@ -38,54 +34,48 @@ public class Carrera {
 	
 	
 	
-	public Atleta buscarAtleta () {
+	public void buscarAtletaMejorTiempo () {
 		Atleta competidorEncontrado = null;
 		Atleta competidorAux;
 		int i = 0;
 		double nuevoMejorTiempo = 0;
-		
+		double aux = 5000000;
+
 		while(competidorEncontrado == null) {
 			competidorAux = this.atletas[i];
-					if (competidorAux.getSegundos() >= aux) {
+					if (competidorAux.getSegundos() <= aux) {
 						competidorEncontrado = competidorAux;
 						nuevoMejorTiempo = competidorEncontrado.getSegundos();
+						agregarGanadores(competidorEncontrado);
+						mostrarGanadores(nuevoMejorTiempo);
 					}
 					else {
 						i++;
 					}
 		}
-		return competidorEncontrado;
 	}
 	
+
 	
-	
-	
-	private Array ampliarArray () {
-		int tamanio;
+	//éste va a ser el que agrega a la lista de ganadores
+	private void agregarGanadores (Atleta persona) {
 		
-		tamanio = this.atletas.length;
-		Atleta [] misAtletas = new [tamanio + 1];
-		for (int i = 0, tamanio - 1, 1) {
-			misAtletas[i] = this.atletas[i];
+			Atleta [] ganadores;
+			
+			ganadores.add[persona];
+		
 		}
-		
-		return misIntegrantes;
 	}
 	
+	//Método itera por cada ganador del Array y lo imprime
 	
-	public void agregarCompetidor(Atleta nombre) {
-		
-		Atleta[] arrAuxiliar;
-		
-		Atleta atleta = buscarAtleta(nombre);
-		if (atleta != null) {
-			arrAuxiliar = ampliarArray();
-			arrAuxiliar.add[atleta];
+	private void mostrarGanadores(double nuevoMejorTiempo) {
+		int i = 0;
+		while(i <= ganadores.length) {
+			Atleta aux = ganadores[i];
+		System.out.println(aux.getNombre());
+		System.out.println(nuevoMejorTiempo);
 		}
-		
 	}
-
-
-
 
 }
