@@ -13,10 +13,10 @@ public class Test {
 		carreraOlimpica.agregarCompetidor(corredor1);
 		carreraOlimpica.agregarCompetidor(corredor2);
 		
-		Atleta atleta = carreraOlimpica.buscarAtleta();
+		Atleta atleta = carreraOlimpica.
 
 		String nombreGanador = atleta.getNombre();
-		System.out.println(nombreganador);
+		System.out.println(nombreGanador);
 		
 	}
 

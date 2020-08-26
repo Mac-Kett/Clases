@@ -26,9 +26,4 @@ public class Atleta {
 		this.nombre = nombre;
 	}
 
-	public static void main(String[] args) {
-		// TODO Apéndice de método generado automáticamente
-
-	}
-
 }
