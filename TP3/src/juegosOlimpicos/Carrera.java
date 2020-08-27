@@ -59,17 +59,19 @@ public class Carrera {
 	
 	//éste va a ser el que agrega a la lista de ganadores
 	private void agregarGanadores (Atleta persona) {
+		int longitud = 0;
+		Atleta [] ganadores;
 		
-			Atleta [] ganadores;
-			
-			ganadores.add[persona];
-		
+		ganadores = new Atleta[longitud + 1]
+		for (int i = 0, longitud - 1, 1) {
+			ganadores[i] = persona;
+		}		
 		}
 	}
 	
 	//Método itera por cada ganador del Array y lo imprime
 	
-	private void mostrarGanadores(double nuevoMejorTiempo) {
+	public void mostrarGanadores(double nuevoMejorTiempo) {
 		int i = 0;
 		while(i <= ganadores.length) {
 			Atleta aux = ganadores[i];
