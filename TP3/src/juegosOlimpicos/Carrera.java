@@ -62,12 +62,11 @@ public class Carrera {
 		int longitud = 0;
 		Atleta [] ganadores;
 		
-		ganadores = new Atleta[longitud + 1]
+		ganadores = new Atleta[longitud + 1];
 		for (int i = 0, longitud - 1, 1) {
 			ganadores[i] = persona;
 		}		
 		}
-	}
 	
 	//Método itera por cada ganador del Array y lo imprime
 	
