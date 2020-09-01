@@ -30,11 +30,11 @@ public class Grupo {
 	}
 	
 	public String buscarIntegrante (String nombre) {
-		String integranteEncontrado = null;
+		String integranteEncontrado = "";
 		String integranteAux;
 		int i = 0;
 		
-		while(integranteEncontrado == null && i <= this.integrantes.size()) {
+		while(integranteEncontrado == "" && i <= this.integrantes.size()) {
 			integranteAux = this.integrantes.get(i);
 					if (integranteAux.equals(nombre)) {
 						integranteEncontrado = integranteAux;
@@ -46,26 +46,13 @@ public class Grupo {
 		return integranteEncontrado;
 	}
 	
-	private Array ampliarArray () {
-		int tamanio;
-		
-		tamanio = this.integrantes.length;
-		Integrante [] misIntegrantes = new [tamanio + 1];
-		for (int i = 0, tamanio - 1, 1) {
-			misIntegrantes[i] = this.integrantes[i];
-		}
-		
-		return misIntegrantes;
-	}
+	
 	
 	public void agregarIntegrante(String nombreIntegrante) {
-		
-		Array Integrante[] miArray;
-		
-		Integrante integrante = buscarIntegrante(nombreIntegrante);
+				
+		String integrante = buscarIntegrante(nombreIntegrante);
 		if (integrante != null) {
-			miArray = ampliarArray();
-			miArray.add[integrante];
+			integrantes.add(integrante);
 		}
 		
 	}
