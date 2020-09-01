@@ -58,13 +58,13 @@ public class Grupo {
 	}
 	
 	private int obtenerPosicionIntegrante (String nombreIntegrante) {
-		Integrante integranteAux == null;
+		String integranteAux = "";
 		int i = 0;
-		int aux;
+		int aux = 0;
 		
-		while(integranteAux == null && i <= this.getCantidadIntegrantes) {
-			integranteAux = this.integrantes[i];
-					if (integranteAux.getNombre() == nombreIntegrante) {
+		while(integranteAux == null && i <= this.getCantidadIntegrantes()) {
+			integranteAux = this.integrantes.get(i);
+					if (integranteAux.equals(nombreIntegrante)) {
 						aux = i;
 					}
 					else {
@@ -74,15 +74,15 @@ public class Grupo {
 		return aux;
 	}
 	
-	public Integrante obtenerIntegrante(int posicion) {
-		Integrante integranteBuscado = integrantes[posicion];
+	public String obtenerIntegrante(int posicion) {
+		String integranteBuscado = integrantes.get(posicion);
 		return integranteBuscado;
 	}
 	
-	public Integrante removerIntegrante(String nombreIntegrante) {
+	public String removerIntegrante(String nombreIntegrante) {
 		
 			int pos = obtenerPosicionIntegrante (nombreIntegrante);
-			Integrante integrante = this.integrantes.remove[pos];
+			String integrante = this.integrantes.remove(pos);
 			
 		return integrante;
 	}
