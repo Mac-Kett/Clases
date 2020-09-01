@@ -1,11 +1,12 @@
 package trabajosPracticos;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Grupo {
 
 	private String nombre;
-	Integrante [] integrantes;
+	ArrayList <String> integrantes;
 	
 	public Grupo (String nom) {
 		this.setNombre(nom);
@@ -23,19 +24,19 @@ public class Grupo {
 	{
 		int cant = 0;
 		
-		cant = this.integrantes.length;
+		cant = this.integrantes.size();
 		
 		return cant;
 	}
 	
-	public Integrante buscarIntegrante (String nombre) {
-		Integrante integranteEncontrado = null;
-		Integrante integranteAux;
+	public String buscarIntegrante (String nombre) {
+		String integranteEncontrado = null;
+		String integranteAux;
 		int i = 0;
 		
-		while(integranteEncontrado == null && i <= this.getCantidadIntegrantes) {
-			integranteAux = this.integrantes[i];
-					if (integranteAux.getNombre() == nombreIntegrante) {
+		while(integranteEncontrado == null && i <= this.integrantes.size()) {
+			integranteAux = this.integrantes.get(i);
+					if (integranteAux.equals(nombre)) {
 						integranteEncontrado = integranteAux;
 					}
 					else {
