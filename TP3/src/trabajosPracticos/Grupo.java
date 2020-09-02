@@ -89,18 +89,17 @@ public class Grupo {
 	
 	private void mostrarIntegrantes() {
 		System.out.println("La cantidad de integrantes es: " + this.getCantidadIntegrantes());
-		for(Integrante a: Array) {
-			System.out.println(a.getNombre());
+		for(String a: integrantes) {
+			System.out.println(a);
 		}
 	}
 	
 	public void mostrar() {
-		System.out.println("El nombre del grupo es: " + this.nombre)
-		System.out.println(this.mostrarIntegrantes());
+		System.out.println("El nombre del grupo es: " + this.nombre);
 	}
 	
 	public void vaciar() {
-		for(Integrante a: Array) {
+		for(String a: integrantes) {
 			this.removerIntegrante(a);
 		}
 	}
