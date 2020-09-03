@@ -9,7 +9,7 @@ public class Test {
 		String mensaje2 = " al grupo ";
 		// TODO Apéndice de método generado automáticamente
 
-		ArrayList <Grupo> grupo1;
+		ArrayList <Grupo> grupo1 = new <Grupo> ("Los Mejores");
 		String grup = grupo1.getNombre();
 
 		String erik = new Integrante ("Erik M.");
