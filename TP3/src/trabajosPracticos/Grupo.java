@@ -50,7 +50,7 @@ public class Grupo {
 	public void agregarIntegrante(String nombreIntegrante) {
 				
 		String integrante = buscarIntegrante(nombreIntegrante);
-		if (integrante != null) {
+		if (integrante != "") {
 			integrantes.add(integrante);
 		}
 		
@@ -101,11 +101,6 @@ public class Grupo {
 		for(String a: integrantes) {
 			this.removerIntegrante(a);
 		}
-	}
-	
-	public static void main(String[] args) {
-		// TODO Apéndice de método generado automáticamente
-
 	}
 
 }
