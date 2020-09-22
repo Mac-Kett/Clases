@@ -27,11 +27,6 @@ public class Rubro {
 	
 	private void agregarGasto(Mes mesAux, double importe) {
 		
-		//recorrer primera posición de matriz con While
-		//hasta que coincida con el mes parámetro. Esa posición de i
-		//va a ser mi parámetro para buscar con un while[i] con un if
-		//qué posición == null, entonces asignarle parámetro importe
-		
 		int i = 0;
 		int j = 0;
 		double posAux = 0;
@@ -57,8 +52,28 @@ public class Rubro {
 			
 	}
 	
-	private double getTotalGastos(Mes ***) {
+	private double getTotalGastos(Mes mes) {
+		//llama al constrcutor de GastosAnuales
 		
+		int index = 0;
+		Mes mesEncontrado = null;
+		Mes auxMes;
+		double auxiliarGastos = 0;
+		double totalGastos = 0;
+		
+		while(index < this.gastosPorMes.length && mesEncontrado == null) {
+			auxMes = this.gastosPorMes[index];
+			if(auxMes == mes) {
+				mesEncontrado = auxMes;
+				for(int i = 0; i < this.gastosPorMes[index].length; i++) {
+					auxiliarGastos = this.gastosPorMes[index][i];
+					
+					totalGastos = totalGastos + auxiliarGastos;
+				}
+			}
+		}
+		
+		return totalGastos;
 	}
 	
 	
