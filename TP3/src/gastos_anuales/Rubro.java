@@ -5,7 +5,7 @@ public class Rubro {
 	private final int TOTAL_MESES = 12;
 	private String nombre;
 	private double[][] gastosPorMes;
-	private double importes[];	
+	private double importes[];
 	
 	public Rubro(String nombre) {
 		this.setNombre(nombre);
@@ -21,11 +21,11 @@ public class Rubro {
 	}
 
 	private void inicializarGastos() {
-		this.gastosPorMes = new double[TOTAL_MESES][this.importes.length];
+		this.importes = new double[TOTAL_MESES];
 
 	}
 	
-	private void agregarGasto(Mes mesAux, double importe) {
+	public void agregarGasto(Mes mesAux, double importe) {
 		
 		int i = 0;
 		int j = 0;
@@ -76,6 +76,11 @@ public class Rubro {
 		return totalGastos;
 	}
 	
+	private double[][] consolidadoDeGastos(){
+		
+				this.gastosPorMes = new double[TOTAL_MESES][this.importes.length];
+
+	}
 	
 	public static void main(String[] args) {
 		// TODO Apéndice de método generado automáticamente
