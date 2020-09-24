@@ -1,5 +1,8 @@
 package gastos_anuales;
 
 public enum Mes {
-ENERO, FEBRERO, MARZO, ABRIL, MAYO, JUNIO, JULIO, AGOSTO, SEPTIEMBRE, OCTUBRE, NOVIEMBRE, DICIEMBRE
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 }
+
+
+//¿Se le puede agregar un método que sea averiguarMesPorNumero?
