@@ -76,11 +76,7 @@ public class Rubro {
 		return totalGastos;
 	}
 	
-	private double[][] consolidadoDeGastos(){
-		
-				this.gastosPorMes = new double[TOTAL_MESES][this.importes.length];
-
-	}
+	
 	
 	public static void main(String[] args) {
 		// TODO Apéndice de método generado automáticamente
