@@ -76,9 +76,32 @@ public class Persona {
 		
 	}
 
-	public static void main(String[] args) {
-		// TODO Apéndice de método generado automáticamente
-
+	public void mostrarTelefonos() {
+		for(int i = 0; i == this.telefonos.size() -1; i++) {
+			System.out.println(this.telefonos.get(i).getValor());
+		}
 	}
+	
+	public void mostrarMascotas() {
+		for(int i = 0; i == this.mascotas.size() -1; i++) {
+			this.mascotas.get(i).mostrarDatos();
+		}
+	}
+	
+	public void mostrarEmails() {
+		for(int i = 0; i == this.emails.size() -1; i++) {
+			System.out.println(this.emails.get(i).getValor());
+		}
+	}
+
+
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", apellido=" + apellido 
+				+ ", telefonos=" + mostrarTelefonos() + ", emails="
+				+ mostrarEmails() + ", mascotas=" + mostrarMascotas() + "]";
+	}
+
+
 
 }

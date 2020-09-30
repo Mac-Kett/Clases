@@ -24,6 +24,10 @@ public class Mascota {
 	private void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+	
+	public void mostrarDatos() {
+		System.out.println(nombre + tipo);
+	}
 
 	public static void main(String[] args) {
 		// TODO Apéndice de método generado automáticamente
