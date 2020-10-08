@@ -14,6 +14,10 @@ public class Direccion {
 		setDepartamento(depto);
 	}
 	
+	public Direccion(int piso, String depto) {
+		setPiso(piso);
+		setDepartamento(depto);
+	}
 	
 	public String getCalle() {
 		return calle;

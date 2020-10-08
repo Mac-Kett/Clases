@@ -66,6 +66,18 @@ public class Vivienda {
 		
 	}
 	
+	public  vaciarDepartamento() {
+		for(int i = 0; i < this.personasViviendo.size() -1; i++) {
+		this.personasViviendo.remove(i);
+		}
+		
+		for(int i = 0; i < this.mueblesCasa.size() -1; i++) {
+			this.mueblesCasa.remove(i);
+		}
+	}
+	
+	
+	
 	@Override
 	public String toString() {
 		return "Vivienda : personasViviendo=" + mostrarPersonas() 
