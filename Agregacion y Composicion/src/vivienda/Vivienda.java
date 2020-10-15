@@ -6,12 +6,13 @@ public class Vivienda {
 
 	private  ArrayList <Persona> personasViviendo;
 	private ArrayList <Mueble> mueblesCasa;
+	private Direccion direccion;
 	
 	public Vivienda (String calle, String altura, int piso, String depto,
 			String nombre, String apellido, int edad,
 			String material, String nombre2, String color) {
 		
-		Direccion direccion = new Direccion(calle, altura, piso, depto);
+		this.direccion = new Direccion(calle, altura, piso, depto);
 		Persona persona = new Persona(nombre, apellido, edad);
 		Mueble mueble = new Mueble(material, nombre2, color);
 		this.personasViviendo = new ArrayList <Persona>();
@@ -22,6 +23,30 @@ public class Vivienda {
 		
 	}
 	
+	public Direccion getDireccion() {
+		return direccion;
+	}
+
+	private void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
+	}
+
+	public ArrayList<Persona> getPersonasViviendo() {
+		return personasViviendo;
+	}
+
+	private void setPersonasViviendo(ArrayList<Persona> personasViviendo) {
+		this.personasViviendo = personasViviendo;
+	}
+
+	public ArrayList<Mueble> getMueblesCasa() {
+		return mueblesCasa;
+	}
+
+	private void setMueblesCasa(ArrayList<Mueble> mueblesCasa) {
+		this.mueblesCasa = mueblesCasa;
+	}
+
 	public void agregarPersona (Persona p) {
 		if(p != null) {
 			this.personasViviendo.add(p);
@@ -66,7 +91,7 @@ public class Vivienda {
 		
 	}
 	
-	public  vaciarDepartamento() {
+	public  void vaciarDepartamento() {
 		for(int i = 0; i < this.personasViviendo.size() -1; i++) {
 		this.personasViviendo.remove(i);
 		}
