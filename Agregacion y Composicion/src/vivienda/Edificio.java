@@ -42,6 +42,7 @@ public class Edificio {
 		viviendaAntigua.vaciarDepartamento();
 		}
 		
+		
 	}
 
 
@@ -81,6 +82,12 @@ public class Edificio {
 	@Override
 	public String toString() {
 		return "Edificio [viviendas=" + viviendas + "]";
+	}
+	
+	
+	//Falta
+	public void mostrarTodo() {
+		System.out.println()
 	}
 	
 }

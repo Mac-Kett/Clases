@@ -4,7 +4,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Apéndice de método generado automáticamente
-
+		Edificio edificio = new Edificio();
 		Vivienda vivienda1 = new Vivienda("Motañeses", "1234", 4, "C",
 				"Arturo", "Roman", 53,
 				"Madera", "Mesa", "Negro");
@@ -18,6 +18,8 @@ public class Test {
 		vivienda1.agregarMueble(sillon);
 		
 		vivienda1.toString();
+		
+		edificio.mostrarTodo();
 	}
 
 }
