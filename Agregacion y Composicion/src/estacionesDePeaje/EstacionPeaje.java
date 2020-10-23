@@ -1,5 +1,7 @@
 package estacionesDePeaje;
 
+import java.util.ArrayList;
+
 public class EstacionPeaje {
 
 	private String id;
@@ -28,7 +30,27 @@ public class EstacionPeaje {
 	}
 	
 	public double cobrar(Vehiculo v) {
+		double tarifa = 0;
+		Cabina cabinaEncontrada = null;
+		Vehiculo vehiculo;
+		Cabina cabina;
+		TipoVehiculo tipo;
+		int i = 0;
 		
+		while(cabinaEncontrada == null && i < this.cabinas().size()) {
+			cabina = this.cabinas().get(i);
+			
+			if(vehiculo != null) {
+				tipo = vehiculo.getTipo();
+				tarifa = vehiculo.costo(vehiculo);
+				
+			}
+			else {
+				i++;
+			}
+		}
+		
+		return tarifa;
 	}
 	
 	public double promedioDemora() {
@@ -36,6 +58,16 @@ public class EstacionPeaje {
 	}
 	
 	public ArrayList<Cabina> cabinasConEfectivo(){
+		int descuento;
+		ArrayList<Cabina> cabinasEfectivo = new ArrayList<Cabina>();
 		
+		for(Cabina c: this.cabinas) {
+			descuento = c.getMedioDePago().getDescuento();
+			
+			if(descuento == 0) {
+				cabinasEfectivo.add(c);
+			}
+		}
+		return cabinasEfectivo;
 	}
 }
