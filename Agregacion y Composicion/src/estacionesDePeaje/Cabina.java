@@ -5,13 +5,11 @@ import java.util.ArrayList;
 public class Cabina {
 
 	private String id;
-	private boolean promocionada;
 	private MedioDePago medioPago;
 	private ArrayList<Empleado> empleados;
 	
 	public Cabina(String id, MedioDePago medioPago) {
 		setId(id);
-		setPromocionada(false);
 		setMedioPago(medioPago);
 	}
 	
@@ -20,12 +18,6 @@ public class Cabina {
 	}
 	private void setId(String id) {
 		this.id = id;
-	}
-	public boolean isPromocionada() {
-		return promocionada;
-	}
-	private void setPromocionada(boolean promocionada) {
-		this.promocionada = promocionada;
 	}
 
 	public MedioDePago getMedioPago() {
@@ -42,6 +34,24 @@ public class Cabina {
 
 	private void setEmpleados(ArrayList<Empleado> empleados) {
 		this.empleados = empleados;
+	}
+	
+	public double cobrar(Vehiculo v) {
+		double costoFinal;
+		
+		costoFinal = v.getTarifa();
+		
+		if(esHoraPico()) {
+			costoFinal = costoFinal + costoFinal * 8 / 100;
+		}
+		
+		return costoFinal - costoFinal * this.medioPago.getDescuento() / 100;
+	}
+	
+	private boolean esHoraPico() {
+		double horaActual = EstacionPeaje.dameHoraActual();
+		
+		return horaActual >= 6 && horaActual <= 10 || horaActual >= 17 && horaActual <= 20;
 	}
 	
 }
