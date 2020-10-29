@@ -2,9 +2,9 @@ package estacionesDePeaje;
 
 public abstract class MedioDePago {
 
-	public double getDescuento() {
-		return -1;
-	}
+	public double descuento;
+	
+	public abstract double getDescuento();
 
 	
 }
