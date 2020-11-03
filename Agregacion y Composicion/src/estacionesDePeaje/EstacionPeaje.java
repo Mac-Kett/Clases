@@ -6,12 +6,21 @@ public class EstacionPeaje {
 
 	private String id;
 	private String descripcion;
+	private ArrayList<Cabina> cabinas;
 	
 	public EstacionPeaje(String id, String descripcion) {
 		setId(id);
 		setDescripcion(descripcion);
 	}
 	
+	public ArrayList<Cabina> getCabinas() {
+		return cabinas;
+	}
+
+	public void setCabinas(ArrayList<Cabina> cabinas) {
+		this.cabinas = cabinas;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -25,10 +34,6 @@ public class EstacionPeaje {
 		this.descripcion = descripcion;
 	}
 	
-	private double dameHoraActual() {
-		
-	}
-	
 	public double cobrar(Vehiculo v) {
 		double tarifa = 0;
 		Cabina cabinaEncontrada = null;
@@ -37,12 +42,12 @@ public class EstacionPeaje {
 		TipoVehiculo tipo;
 		int i = 0;
 		
-		while(cabinaEncontrada == null && i < this.cabinas().size()) {
-			cabina = this.cabinas().get(i);
+		while(cabinaEncontrada == null && i < this.cabinas.size()) {
+			cabina = this.cabinas.get(i);
 			
 			if(vehiculo != null) {
 				tipo = vehiculo.getTipo();
-				tarifa = vehiculo.costo(vehiculo);
+				tarifa = vehiculo.TipoVehiculo.getTarifa(vehiculo);
 				
 			}
 			else {
@@ -53,21 +58,41 @@ public class EstacionPeaje {
 		return tarifa;
 	}
 	
-	public double promedioDemora() {
-		
-	}
-	
 	public ArrayList<Cabina> cabinasConEfectivo(){
-		int descuento;
-		ArrayList<Cabina> cabinasEfectivo = new ArrayList<Cabina>();
+		ArrayList<Cabina> cabinasEfectivo = null;
+		MedioDePago medioP;
 		
 		for(Cabina c: this.cabinas) {
-			descuento = c.getMedioDePago().getDescuento();
-			
-			if(descuento == 0) {
-				cabinasEfectivo.add(c);
-			}
+			medioP = c.getMedioPago();
+					
+				if(medioP instanceof Efectivo) {
+					if(c != null) {
+					cabinasEfectivo.add(c);
+					}
+				}
 		}
 		return cabinasEfectivo;
 	}
+	
+	public double promedioDemora() {
+		int contador = 0;
+		int sumador = 0;
+		
+		for(Cabina c: this.cabinas) {
+			MediosElectronicos medioPago = c.getMedioPago();
+			
+			if(medioPago instanceof MediosElectronicos) {
+				sumador = sumador + medioPago.getDemora();
+				contador++;
+			}
+		}
+		
+		return sumador / contador;
+	}
+	
+	public static double dameHoraActual() {
+		return 0;
+		//Lo hardcodeé. Falta implementar
+	}
+	
 }
