@@ -2,14 +2,19 @@ package estacionesDePeaje;
 
 public class Sube extends MediosElectronicos{
 
-	@Override
-	public int getDemora() {
-		
-	}
+	public static double DCTO = 10;
+	public static double descuento;
 	
 	@Override
 	public double getDescuento() {
-		
+		return DCTO;
 	}
+	
+	@Override
+	public int getDemora() {
+		return 5;
+	}
+	
+	
 	
 }

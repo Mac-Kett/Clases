@@ -2,20 +2,14 @@ package estacionesDePeaje;
 
 public enum TipoVehiculo {
 
-	public CAMION,
-	public AUTO,
-	public MOTO
+	CAMION,
+	AUTO,
+	MOTO;
+	double tarifa;
 	
-	public double costo(Vehiculo) {
-		if(vehiculo.tipo()) {
-			case CAMION: costo = 30;
-			break;
-			case AUTO: costo = 20;
-			break;
-			case MOTO: costo = 10;
-		}
+	public double getTarifa() {
 		
-		return costo;
+		return this.tarifa;
 	}
 	
 }

@@ -26,4 +26,8 @@ public class Vehiculo {
 		this.tipo = tipo;
 	}
 	
+	public double getTarifa() {
+		return this.tipo.getTarifa();
+	}
+	
 }
