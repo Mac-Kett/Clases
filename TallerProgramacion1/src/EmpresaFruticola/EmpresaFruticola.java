@@ -20,8 +20,15 @@ public class EmpresaFruticola {
 		this.nombre = nombre;
 	}
 
+	public void agregarPlantacion(String nombre) {
+	//TODO	
+	}
+	
+	public void cargarDatosCosecha (int a, int b, Producto prod, double d) {
+		//TODO
+	}
 
-
+	
 	public static void main(String[] args) {
 		// TODO Apéndice de método generado automáticamente
 
