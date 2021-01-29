@@ -8,8 +8,20 @@ public class EmpresaFruticola {
 	private int[][] contCosechas;
 	private double[][] toneladasAcumuladas;
 	
+	public EmpresaFruticola(String nom) {
+		setNombre(nom);
+	}
 	
-	
+	public String getNombre() {
+		return nombre;
+	}
+
+	private void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+
 	public static void main(String[] args) {
 		// TODO Apéndice de método generado automáticamente
 
