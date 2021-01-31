@@ -1,5 +1,7 @@
 package EmpresaFruticola;
 
+import java.util.ArrayList;
+
 public class Plantacion {
 
 	private String nombre;
