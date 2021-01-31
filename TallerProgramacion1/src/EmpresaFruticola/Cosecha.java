@@ -54,6 +54,11 @@ public class Cosecha {
 	
 	public double obtenerRendimiento() {
 		//TODO
+		double resultado = 0;
+		
+		resultado = this.toneladas/this.hectareas;
+		
+		return resultado;
 	}
 	
 	public void imprimirResultadoCosecha() {
