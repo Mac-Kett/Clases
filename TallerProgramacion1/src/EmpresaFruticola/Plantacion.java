@@ -88,10 +88,34 @@ public class Plantacion {
 	
 	public void mostrarMenoresA (int num) {
 		//TODO
+		double aux = 0;
+		
+		System.out.println("Los resultados menores a " + num + "fueron: ");
+		
+		for(Cosecha c: this.cosechas) {
+			aux = c.obtenerRendimiento();
+			
+			if(aux < num) {
+				c.imprimirResultadoCosecha();
+			}
+		}
+		
 	}
 
 	public void mostrarMayoresA(int num) {
 		//TODO
+		double aux = 0;
+		
+			System.out.println("Los resultados mayores a " + num + "fueron: ");
+		
+		for(Cosecha c: this.cosechas) {
+			aux = c.obtenerRendimiento();
+			
+			if(aux > num) {
+				c.imprimirResultadoCosecha();
+			}
+		}
+		
 	}
 	
 	public Cosecha getCosechaPorNumero(int num) {
