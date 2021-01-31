@@ -8,6 +8,10 @@ public class Cosecha {
 	private double hectareas;
 	
 	public Cosecha(DatosCosecha datos) {
+		setNro(datos.getNroCosecha());
+		setProducto(datos.getProducto());
+		setToneladas(datos.getToneladas());
+		setHectareas(datos.getHectareas());
 		
 	}
 
@@ -46,6 +50,20 @@ public class Cosecha {
 	@Override
 	public String toString() {
 		return "Cosecha [nro=" + nro + ", toneladas=" + toneladas + ", hectareas=" + hectareas + "]";
+	}
+	
+	public double obtenerRendimiento() {
+		//TODO
+		double resultado = 0;
+		
+		resultado = this.toneladas/this.hectareas;
+		
+		return resultado;
+	}
+	
+	public void imprimirResultadoCosecha() {
+		//TODO
+		System.out.println("Los resultados de la cosecha fueron: "+ obtenerRendimiento());
 	}
 	
 }

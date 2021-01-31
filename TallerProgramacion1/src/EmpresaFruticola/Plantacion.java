@@ -1,5 +1,7 @@
 package EmpresaFruticola;
 
+import java.util.ArrayList;
+
 public class Plantacion {
 
 	private String nombre;
@@ -29,38 +31,109 @@ public class Plantacion {
 	
 	public void agregarCosecha(Cosecha c) {
 		//TODO
+		
+		this.cosechas.add(c);
+		
 	}
 	
 	public void mostrarDatos() {
 		//TODO
+		toString();
+		
 	}
 	
 	public void mostrarTodos() {
 		//TODO
+		
+		for(Cosecha c: this.cosechas) {
+			c.toString();
+			c.imprimirResultadoCosecha();
+		}
+		
 	}
 	
 	public void rendimientoMaximo() {
 		//TODO
+		
+		double rendimientoMax = 0;
+		double rendimientoAux = 0;
+		
+		for(Cosecha c: this.cosechas) {
+			rendimientoAux = c.obtenerRendimiento();
+			
+			if(rendimientoAux > rendimientoMax) {
+				rendimientoMax = rendimientoAux;
+			}
+		}
+		
+		System.out.println("El rendimiento máximo fue de "+ rendimientoMax);
 	}
 	
 	public void rendimientoMinimo() {
 		//TODO
+		
+		double rendimientoMin = 999999999;
+		double rendimientoAux = 0;
+		
+		for(Cosecha c: this.cosechas) {
+			rendimientoAux = c.obtenerRendimiento();
+			
+			if(rendimientoAux < rendimientoMin) {
+				rendimientoMin = rendimientoAux;
+			}
+			
+		}
+		System.out.println("El rendimiento mínimo fue: " + rendimientoMin);
 	}
 	
 	public void mostrarMenoresA (int num) {
 		//TODO
+		double aux = 0;
+		
+		System.out.println("Los resultados menores a " + num + "fueron: ");
+		
+		for(Cosecha c: this.cosechas) {
+			aux = c.obtenerRendimiento();
+			
+			if(aux < num) {
+				c.imprimirResultadoCosecha();
+			}
+		}
+		
 	}
 
 	public void mostrarMayoresA(int num) {
 		//TODO
+		double aux = 0;
+		
+			System.out.println("Los resultados mayores a " + num + "fueron: ");
+		
+		for(Cosecha c: this.cosechas) {
+			aux = c.obtenerRendimiento();
+			
+			if(aux > num) {
+				c.imprimirResultadoCosecha();
+			}
+		}
+		
 	}
 	
 	public Cosecha getCosechaPorNumero(int num) {
 		//TODO
+		
+		
 	}
 	
 	public Cosecha getCosechaPorProducto(Producto prod) {
 		//TODO
+		
+		
 	}
+
+	@Override
+	public String toString() {
+		return "Plantacion [nombre=" + nombre + ", hectareas=" + hectareas + ", cosechas=" + cosechas + "]";
+	}
+	
 	
 }
