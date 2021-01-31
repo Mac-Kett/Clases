@@ -56,6 +56,10 @@ public class DatosCosecha {
 		this.hectareas = hectareas;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "DatosCosecha [nroPlantacion=" + nroPlantacion + ", nroCosecha=" + nroCosecha + ", toneladas="
+				+ toneladas + ", hectareas=" + hectareas + "]";
+	}
 	
 }
