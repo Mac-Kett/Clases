@@ -121,7 +121,19 @@ public class Plantacion {
 	public Cosecha getCosechaPorNumero(int num) {
 		//TODO
 		
+		boolean encontrado = false;
+		int aux = 0;
+		Cosecha buscado = null;
 		
+		while(!encontrado && aux < this.cosechas.size()) {
+			buscado = this.cosechas.get(aux);
+			
+			if(buscado.getNro() == num) {
+				encontrado = true;
+			}
+		}
+		
+		return buscado;
 	}
 	
 	public Cosecha getCosechaPorProducto(Producto prod) {
