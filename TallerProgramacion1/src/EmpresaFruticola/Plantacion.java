@@ -120,10 +120,14 @@ public class Plantacion {
 	
 	public Cosecha getCosechaPorNumero(int num) {
 		//TODO
+		
+		
 	}
 	
 	public Cosecha getCosechaPorProducto(Producto prod) {
 		//TODO
+		
+		
 	}
 
 	@Override
