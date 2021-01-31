@@ -54,10 +54,36 @@ public class Plantacion {
 	
 	public void rendimientoMaximo() {
 		//TODO
+		
+		double rendimientoMax = 0;
+		double rendimientoAux = 0;
+		
+		for(Cosecha c: this.cosechas) {
+			rendimientoAux = c.obtenerRendimiento();
+			
+			if(rendimientoAux > rendimientoMax) {
+				rendimientoMax = rendimientoAux;
+			}
+		}
+		
+		System.out.println("El rendimiento máximo fue de "+ rendimientoMax);
 	}
 	
 	public void rendimientoMinimo() {
 		//TODO
+		
+		double rendimientoMin = 999999999;
+		double rendimientoAux = 0;
+		
+		for(Cosecha c: this.cosechas) {
+			rendimientoAux = c.obtenerRendimiento();
+			
+			if(rendimientoAux < rendimientoMin) {
+				rendimientoMin = rendimientoAux;
+			}
+			
+		}
+		System.out.println("El rendimiento mínimo fue: " + rendimientoMin);
 	}
 	
 	public void mostrarMenoresA (int num) {
