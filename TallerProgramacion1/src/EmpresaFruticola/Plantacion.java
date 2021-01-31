@@ -31,14 +31,25 @@ public class Plantacion {
 	
 	public void agregarCosecha(Cosecha c) {
 		//TODO
+		
+		this.cosechas.add(c);
+		
 	}
 	
 	public void mostrarDatos() {
 		//TODO
+		toString();
+		
 	}
 	
 	public void mostrarTodos() {
 		//TODO
+		
+		for(Cosecha c: this.cosechas) {
+			c.toString();
+			c.imprimirResultadoCosecha();
+		}
+		
 	}
 	
 	public void rendimientoMaximo() {
@@ -64,5 +75,11 @@ public class Plantacion {
 	public Cosecha getCosechaPorProducto(Producto prod) {
 		//TODO
 	}
+
+	@Override
+	public String toString() {
+		return "Plantacion [nombre=" + nombre + ", hectareas=" + hectareas + ", cosechas=" + cosechas + "]";
+	}
+	
 	
 }
