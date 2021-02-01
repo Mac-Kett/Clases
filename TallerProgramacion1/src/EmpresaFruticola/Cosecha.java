@@ -8,11 +8,34 @@ public class Cosecha {
 	private double hectareas;
 	
 	public Cosecha(DatosCosecha datos) {
-		setNro(datos.getNroCosecha());
-		setProducto(datos.getProducto());
-		setToneladas(datos.getToneladas());
-		setHectareas(datos.getHectareas());
 		
+		if(datos.getNroCosecha() == 0) {
+			throw new IllegalArgumentException ("El número de hectárea no puede ser nulo.");
+		}
+		else{
+		setNro(datos.getNroCosecha());
+		}
+		
+		
+		try {
+		setProducto(datos.getProducto());
+		} catch(NullPointerException npe) {
+			System.out.println("El producto no puede ser nulo.");
+		}
+		
+		
+		if (datos.getToneladas() <= 0) {
+		throw new IllegalArgumentException("La cantidad de toneladas no puede ser menor a cero.");
+		}
+		else {
+			setToneladas(datos.getToneladas());
+		}
+		
+		if(datos.getHectareas() <= 0) {
+			throw new IllegalArgumentException("La cantidad de hectareas no puede ser menor a cero.");
+		} else {
+		setHectareas(datos.getHectareas());
+		}
 	}
 
 	public int getNro() {
@@ -20,7 +43,14 @@ public class Cosecha {
 	}
 
 	private void setNro(int nro) {
-		this.nro = nro;
+		if(nro <= 0) {
+			throw new IllegalArgumentException ("El número de hectárea no puede ser nulo.");
+		}
+		else{
+			this.nro = nro;
+
+		}
+		
 	}
 
 	public Producto getProducto() {
@@ -28,7 +58,12 @@ public class Cosecha {
 	}
 
 	private void setProducto(Producto producto) {
+		if(producto = null) {
+			throw new NullPointerException ("El producto no puede ser nulo.");
+		}
+		else{
 		this.producto = producto;
+		}
 	}
 
 	public double getToneladas() {
@@ -36,7 +71,12 @@ public class Cosecha {
 	}
 
 	private void setToneladas(double toneladas) {
+		if(toneladas <= 0) {
+			throw new IllegalArgumentException ("El número de toneladas no puede ser nulo.");
+		}
+		else{
 		this.toneladas = toneladas;
+		}
 	}
 
 	public double getHectareas() {
@@ -44,7 +84,12 @@ public class Cosecha {
 	}
 
 	private void setHectareas(double hectareas) {
+		if(hectareas <= 0) {
+			throw new IllegalArgumentException ("Las hectáreas no pueden ser nulas.");
+		}
+		else{
 		this.hectareas = hectareas;
+		}
 	}
 
 	@Override
