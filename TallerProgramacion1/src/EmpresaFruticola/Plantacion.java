@@ -125,7 +125,7 @@ public class Plantacion {
 		int aux = 0;
 		Cosecha buscado = null;
 		
-		while(!encontrado && aux < this.cosechas.size()) {
+		while(encontrado = false && aux <= this.cosechas.size()) {
 			buscado = this.cosechas.get(aux);
 			
 			if(buscado.getNro() == num) {
@@ -139,7 +139,19 @@ public class Plantacion {
 	public Cosecha getCosechaPorProducto(Producto prod) {
 		//TODO
 		
+		boolean encontrado = false;
+		int aux = 0;
+		Cosecha cBuscado = null;
 		
+		while(encontrado = false && aux <= this.cosechas.size()) {
+			cBuscado = this.cosechas.get(aux);
+			
+			if(cBuscado.getProducto() == prod) {
+			encontrado = true;	
+			}
+		}
+		
+		return cBuscado;
 	}
 
 	@Override
