@@ -58,7 +58,7 @@ public class Cosecha {
 	}
 
 	private void setProducto(Producto producto) {
-		if(producto = null) {
+		if(producto == null) {
 			throw new NullPointerException ("El producto no puede ser nulo.");
 		}
 		else{
@@ -100,9 +100,11 @@ public class Cosecha {
 	public double obtenerRendimiento() {
 		//TODO
 		double resultado = 0;
-		
+		try {
 		resultado = this.toneladas/this.hectareas;
-		
+		} catch (ArithmeticException ae) {
+			System.out.println("Ésta división no está permitida");
+		}
 		return resultado;
 	}
 	
