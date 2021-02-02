@@ -15,6 +15,7 @@ public class EmpresaFruticola {
 		ArrayList<DatosCosecha> datosCosecha = new ArrayList<DatosCosecha>();
 		ArrayList<Plantacion> plantaciones = new ArrayList<Plantacion>();
 		
+		contCosechas[][];
 	}
 	
 	public String getNombre() {
@@ -22,11 +23,17 @@ public class EmpresaFruticola {
 	}
 
 	private void setNombre(String nombre) {
+		if(nombre == "" || nombre == " ") {
+			throw new IllegalArgumentException ("El nombre no puede quedar vacío");
+		} else {
 		this.nombre = nombre;
+		}
 	}
 
 	public void agregarPlantacion(String nombre) {
 	//TODO	
+		Plantacion plantacion = new Plantacion(nombre, 0);
+		plantaciones.add(plantacion);
 	}
 	
 	public void cargarDatosCosecha (int a, int b, Producto prod, double d) {
@@ -39,10 +46,25 @@ public class EmpresaFruticola {
 	
 	private boolean nroDePlantacionValido(int num) {
 		//TODO
+		
+		boolean esValido = false;
+		int i  = 0;
+		Plantacion actual = null;
+		
+		while (esValido == false && i < this.plantaciones.size()) {
+			actual = this.plantaciones.get(i);
+			
+			if(actual.getCosechaPorNumero(num) != null) {
+				esValido = true;
+			}
+		}
+		
+		return esValido;
 	}
 	
 	private int cantidadDeProductos() {
 		//TODO
+		
 	}
 	
 	public void procesarDatos() {

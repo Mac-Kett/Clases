@@ -16,7 +16,7 @@ public class Plantacion {
 		}
 		
 		if(hec <= 0) {
-			throw new IllegalArgumentExcepcion ("La cantidad de hectareas no puede ser cero o negativo");
+			throw new IllegalArgumentException ("La cantidad de hectareas no puede ser cero o negativo");
 		} else {
 		setHectareas(hec);
 		}
