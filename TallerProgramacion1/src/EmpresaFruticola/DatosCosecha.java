@@ -46,7 +46,12 @@ public class DatosCosecha {
 	}
 
 	private void setNroPlantacion(int nroPlantacion) {
+		
+		if(nroPlantacion <= 0) {
+			throw new IllegalArgumentException ("El numero de plantación no puede ser cero");
+		} else {
 		this.nroPlantacion = nroPlantacion;
+		}
 	}
 
 	public int getNroCosecha() {
@@ -54,7 +59,11 @@ public class DatosCosecha {
 	}
 
 	private void setNroCosecha(int nroCosecha) {
+		if(nroCosecha <= 0) {
+			throw new IllegalArgumentException("El numero de cosecha no puede ser negativo o cero");
+		} else {
 		this.nroCosecha = nroCosecha;
+		}
 	}
 
 	public Producto getProducto() {
@@ -62,7 +71,12 @@ public class DatosCosecha {
 	}
 
 	private void setProducto(Producto producto) {
+		
+		if (producto == null) {
+			throw new ArithmeticException("El producto no puede ser nulo");
+		} else {
 		this.producto = producto;
+		}
 	}
 
 	public double getToneladas() {
@@ -70,7 +84,11 @@ public class DatosCosecha {
 	}
 
 	private void setToneladas(double toneladas) {
+		if(toneladas <= 0) {
+			throw new IllegalArgumentException("La cantidad de toneladas no puede ser cero o negativo");
+		} else {
 		this.toneladas = toneladas;
+		}
 	}
 
 	public double getHectareas() {
@@ -78,7 +96,11 @@ public class DatosCosecha {
 	}
 
 	private void setHectareas(double hectareas) {
+		if(hectareas <= 0) {
+			throw new IllegalArgumentException("La cantidad de hectareas no puede ser cero o negativo");
+		} else {
 		this.hectareas = hectareas;
+		}
 	}
 
 	@Override
