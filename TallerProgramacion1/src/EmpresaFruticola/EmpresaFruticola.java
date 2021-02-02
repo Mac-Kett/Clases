@@ -12,6 +12,9 @@ public class EmpresaFruticola {
 	
 	public EmpresaFruticola(String nom) {
 		setNombre(nom);
+		ArrayList<DatosCosecha> datosCosecha = new ArrayList<DatosCosecha>();
+		ArrayList<Plantacion> plantaciones = new ArrayList<Plantacion>();
+		
 	}
 	
 	public String getNombre() {
