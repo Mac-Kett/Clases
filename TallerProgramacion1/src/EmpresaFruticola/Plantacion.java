@@ -27,7 +27,12 @@ public class Plantacion {
 	}
 
 	private void setNombre(String nombre) {
+		
+		if(nombre == "" || nombre == " ") {
+			throw new IllegalArgumentException ("El nombre no puede quedar vacío");
+		} else {
 		this.nombre = nombre;
+		}
 	}
 
 	public double getHectareas() {
@@ -35,7 +40,11 @@ public class Plantacion {
 	}
 
 	private void setHectareas(double hectareas) {
+		if(hectareas <= 0) {
+			throw new IllegalArgumentException("La cantidad de hectareas no puede ser cero o negativo");
+		} else {
 		this.hectareas = hectareas;
+		}
 	}
 	
 	public void agregarCosecha(Cosecha c) {
