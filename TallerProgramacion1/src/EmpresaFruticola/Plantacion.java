@@ -9,8 +9,17 @@ public class Plantacion {
 	private ArrayList<Cosecha> cosechas;
 	
 	public Plantacion(String nom, double hec) {
+		if (nom == "") {
+			throw new IllegalArgumentException ("El nombre no puede estar vacio");
+		} else {
 		setNombre(nom);
+		}
+		
+		if(hec <= 0) {
+			throw new IllegalArgumentExcepcion ("La cantidad de hectareas no puede ser cero o negativo");
+		} else {
 		setHectareas(hec);
+		}
 	}
 
 	public String getNombre() {
